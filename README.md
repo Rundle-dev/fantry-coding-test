@@ -31,3 +31,30 @@ CSVをインポートしたら売上のサーマリーを計算してくださ�
 
 ### 任意のユーザーの購入履歴を取消したい  
 任意のユーザーに対して任意の購入履歴を取消できるようにしてください。フロント側で対象の購入履歴が取消され、かつ上記の2つの総額等の集計に取消が反映される（減算される）ようにしてください。
+
+## 備考  
+### テストデータについて  
+テストデータはこちらにアップロードしています。  
+https://github.com/Rundle-dev/fantry-coding-test/blob/main/fantry-coding-test-orders.csv  
+
+### 実装について  
+使用言語は問いません。最も得意な言語を使用していただいて構いません。CUIベースのプログラムの作成を想定しています。下記は言語ごとの動作例となります。  
+
+#### C#
+```
+C:¥User> Please Entry CSV file: "fantry-coding-test-orders.csv"
+C:¥User> CSV import is completed.
+C:¥User> Please Entry Command: SUMMARY
+C:¥User> SUMMARY: Amount
+C:¥User> SUMMARY: XXX yen
+```
+
+### Ruby
+```
+MacBook-Pro:~ user$ csv = CSV.new
+MacBook-Pro:~ user$ csv.import("fantry-coding-test-orders.csv")
+MacBook-Pro:~ user$ true
+MacBook-Pro:~ user$ summary = csv.summarize
+MacBook-Pro:~ user$ summary.amount
+MacBook-Pro:~ user$ XXX yen
+```
